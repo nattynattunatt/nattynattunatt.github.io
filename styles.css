@@ -1,0 +1,39 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:#f5f7fb;color:#111}
+.container{max-width:900px;margin:40px auto;padding:16px}
+.profile-card{background:#fff;border-radius:12px;padding:20px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;gap:12px}
+.profile-img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 6px 12px rgba(0,0,0,0.08)}
+h1{margin:0;font-size:1.6rem}
+.job{margin:4px 0 0;color:#6b7280}
+.card{background:#fff;border-radius:12px;padding:16px;margin-top:16px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+h2{margin:0 0 8px 0;color:#10b981}
+ul{padding-left:1rem;margin:0}
+.contact a{color:#064e3b;text-decoration:none}
+.contact a:hover{text-decoration:underline}
+.footer{text-align:center;margin-top:18px;color:#6b7280;font-size:0.9rem}
+
+/* Responsive layout para pantallas grandes */
+@media (min-width:700px){
+  .container{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .profile-card{grid-column:1 / -1;flex-direction:row;text-align:left;padding:24px;align-items:center}
+  .profile-img{width:120px;height:120px}
+  .about{grid-column:1 / 2}
+  .skills{grid-column:2 / 3}
+  .contact{grid-column:1 / -1}
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.2);
+  }
+}
